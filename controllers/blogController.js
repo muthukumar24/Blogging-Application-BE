@@ -137,7 +137,7 @@ export const viewBlog = async (req, res) => {
 export const addBlog = async (req, res) => {
   try {
     const { title, category, author, content } = req.body;
-    const image = req.file; // multer parses single image as req.file
+    const image = req.file;
 
     if (!image) {
       return res.status(400).json({
